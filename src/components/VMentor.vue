@@ -1,0 +1,37 @@
+<template>
+    <div class="tonal-card">
+      <div class="flex items-center">
+        <h3 class="font-bold text-2xl mr-5">
+        <img :src="img" class="w-10 h-10" alt="mentor" /> 
+        </h3>
+        <h3>{{ title }}</h3>
+      </div>
+    </div>  
+  </template>
+  
+  <script lang="ts" setup>
+  defineProps({
+    id: {
+      type: Number,
+      required: true
+    },
+    img: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+  });
+  </script>
+  
+  <style lang="scss" scoped>
+  .tonal-card {
+    @apply flex flex-col bg-inverse-on-surface text-on-surface rounded-[32px] overflow-hidden relative p-5;
+  }
+  
+  md-linear-progress {
+    @apply absolute top-0 left-0 right-0;
+  }
+  </style>
